@@ -15,6 +15,19 @@ pytest = "^8.3.4"
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.9.4"
 
+[tool.ruff]
+indent-width = 4
+line-length = 120
+lint.select = [
+    "E",  # Erros de estilo (regras de PEP 8 e outros erros)
+    "F",  # Erros de flake8
+    "W",  # Avisos de estilo e outros
+]
+
+[tool.ruff.format]
+indent-style = "space"
+quote-style = "double"
+
 
 [build-system]
 requires = ["poetry-core"]
