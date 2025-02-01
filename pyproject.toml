@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "tax-api"
+version = "0.1.0"
+description = "API que oferece serviços relacionados à tributação"
+authors = ["Gabriel Ladeira <gabrielxladeira@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+fastapi = {extras = ["standard"], version ="^0.115.8"}
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.4"
+pre-commit = "^4.1.0"
+pytest = "^8.3.4"
+
+[tool.ruff]
+indent-width = 4
+line-length = 120
+lint.select = [
+    "E",  # Erros de estilo (regras de PEP 8 e outros erros)
+    "F",  # Erros de flake8
+    "W",  # Avisos de estilo e outros
+]
+
+[tool.ruff.format]
+indent-style = "space"
+quote-style = "double"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
