@@ -24,7 +24,7 @@ poetry run alembic upgrade head
 
 Precisa adicionar uma nova revision do banco? Adicione uma nova migração com o comando:
 ```
-poetry run alembic revision --autogerate -m "descrição da migração"
+poetry run alembic revision --autogenerate -m "descrição da migração"
 ```
 
 ### Iniciando a aplicação
