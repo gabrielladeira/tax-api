@@ -25,7 +25,7 @@ def upgrade() -> None:
     op.create_table(
         "tax_rates",
         sa.Column("id", sa.Uuid(), nullable=False),
-        sa.Column("tax_type", sa.Enum("PIS", "COFINS", "CLSS", name="taxratetype"), nullable=False),
+        sa.Column("tax_type", sa.Enum("PIS", "COFINS", "CLSS", name="tax_types"), nullable=False),
         sa.Column("tax_period", sqlmodel.sql.sqltypes.AutoString(), nullable=False),
         sa.Column("base_tax_rate", sa.Float(), nullable=False),
         sa.Column("presumide_tax_rate", sa.Float(), nullable=True),
